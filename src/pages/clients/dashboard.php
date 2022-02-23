@@ -56,14 +56,14 @@
                                         $result = mysqli_query($db, $sql);
                                         $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-                                        foreach ($items as $items) {
+                                        foreach ($items as $item) {
                                             echo '
                                                 <tr>
                                                     <th scope="row">'. $num .'</th>
-                                                    <td>'. $item['from'] .'</td>
-                                                    <td>'. $item['to'] .'</td>
-                                                    <td>'. $item['Date'] .'</td>
-                                                    <td>'. $item['Time'] .'</td>
+                                                    <td>'. $item['pickFrom'] .'</td>
+                                                    <td>'. $item['dropTo'] .'</td>
+                                                    <td>'. $item['pickDate'] .'</td>
+                                                    <td>'. $item['pickTime'] .'</td>
                                                 </tr>
                                             ';
                                         }
