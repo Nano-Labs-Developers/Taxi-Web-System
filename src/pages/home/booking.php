@@ -64,26 +64,15 @@
                 <div class="col-6">
                     <label for="basic-url" class="form-label">Pick-up Date</label>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="pickup_date" id="pickup_date" aria-describedby="basic-addon3" required>
+                        <input type="date" class="form-control" name="pickup_date" id="pickup_date" aria-describedby="basic-addon3" required>
                     </div>
                 </div>
                 <div class="col-6">
                     <label for="basic-url" class="form-label">Pick-up Time</label>
                     <div class="input-group mb-3 date" id="datepicket">
-                        <input type="text" class="form-control" name="pickup_time" id="pickup_time" aria-describedby="basic-addon3" required>
-                        <span class="input-group-append">
-                            <span class="input-group-text bg-white">
-                                <i class="fa fa-calendar"></i>
-                            </span>
-                        </span>
+                        <input type="time" class="form-control" name="pickup_time" id="pickup_time" aria-describedby="basic-addon3" required>
                     </div>
                 </div>
-
-                <script>
-                    $(function(){
-                        $('#datepicket').datepicker()
-                    })
-                </script>
 
                 <div class="col-6">
                     <label for="basic-url" class="form-label mb-4">Select a Vehicle</label>

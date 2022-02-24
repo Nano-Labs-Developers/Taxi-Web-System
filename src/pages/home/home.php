@@ -7,7 +7,7 @@
 
             //echo '<script>console.log('.$from. $to.')</script>';
                         
-            header('Location: /ride?from='.$from.'&to='.$to);
+            header('Location: /book?from='.$from.'&to='.$to);
             die();
         }
     }
