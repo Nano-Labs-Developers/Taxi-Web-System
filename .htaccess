@@ -61,44 +61,48 @@ RewriteRule ^/css/?css(.*) ./src/css/$1
 RewriteRule ^/js/?js(.*) ./src/js/$1
 RewriteRule ^.*/images/(.*)$ http://%{HTTP_HOST}/images/$1 [L,R=301]
 
-
-
 ##### PATH PAGES #####
 
 # Home
-RewriteRule ^home ./src/pages/home/home.php [NC,L]
-RewriteRule ^book ./src/pages/home/booking.php [NC,L]
-RewriteRule ^drive ./src/pages/home/drive.php [NC,L]
-RewriteRule ^features ./src/pages/home/features.php [NC,L]
-RewriteRule ^about ./src/pages/home/about.php [NC,L]
-RewriteRule ^contact ./src/pages/home/contact.php [NC,L]
+RewriteRule ^home ./Pages/Home/Home.php [NC,L]
+RewriteRule ^book ./Pages/Home/Booking.php [NC,L]
+RewriteRule ^drive ./Pages/Home/Drive.php [NC,L]
+RewriteRule ^features ./Pages/Home/Features.php [NC,L]
+RewriteRule ^about ./Pages/Home/About.php [NC,L]
+RewriteRule ^contact ./Pages/Home/Contact.php [NC,L]
 
 # Auth
-RewriteRule ^login ./src/pages/auth/login.php [NC,L]
-RewriteRule ^register ./src/pages/auth/register.php [NC,L]
-RewriteRule ^logout ./src/pages/auth/logout.inc.php [NC,L]
+RewriteRule ^login ./Pages/Auth/Login.php [NC,L]
+RewriteRule ^register ./Pages/Auth/Register.php [NC,L]
+
+# logout
+RewriteRule ^logout ./Pages/Auth/Logout.inc.php [NC,L]
+RewriteRule ^logoutd ./Pages/Auth/Logout_driver.inc.php [NC,L]
 
 # Driver
-RewriteRule ^d/$1 ./src/pages/drivers/register.php [NC,L]
-RewriteRule ^d/dashboard ./src/pages/drivers/dashboard.php [NC,L]
-RewriteRule ^d/orderpool ./src/pages/drivers/dashboard.php [NC,L]
-RewriteRule ^d/orderreceived ./src/pages/drivers/dashboard.php [NC,L]
-RewriteRule ^d/profile ./src/pages/drivers/dashboard.php [NC,L]
+RewriteRule ^d/dashboard ./Pages/Drivers/Dashboard.php [NC,L]
+RewriteRule ^d/orders ./Pages/Drivers/Orders.php [NC,L]
+RewriteRule ^d/reviews ./Pages/Drivers/Reviews.php [NC,L]
+RewriteRule ^d/settings ./Pages/Drivers/Settings.php [NC,L]
+RewriteRule ^d/profile ./Pages/Drivers/Profile.php [NC,L]
 
 # client
-RewriteRule ^c/dashboard ./src/pages/clients/dashboard.php [NC,L]
-RewriteRule ^c/orders ./src/pages/clients/orders.php [NC,L]
-RewriteRule ^c/reviews ./src/pages/clients/reviews.php [NC,L]
-RewriteRule ^c/settings ./src/pages/clients/settings.php [NC,L]
-RewriteRule ^c/profile ./src/pages/clients/profile.php [NC,L]
+RewriteRule ^c/dashboard ./Pages/clients/Dashboard.php [NC,L]
+RewriteRule ^c/orders ./Pages/clients/Orders.php [NC,L]
+RewriteRule ^c/reviews ./Pages/clients/Reviews.php [NC,L]
+RewriteRule ^c/settings ./Pages/clients/Settings.php [NC,L]
+RewriteRule ^c/profile ./Pages/clients/Profile.php [NC,L]
 
+# payment
+RewriteRule ^p/payment ./Pages/Payment/Payment.php [NC,L]
+RewriteRule ^p/paymentsuccess. ./Pages/Payment/PaymentSuccess.php [NC,L]
 
 # error
 RewriteRule ^error ./src/Views/errorpage.php [NC,L]
 
 # public files
-RewriteRule ^manifest.json ./public/manifest.json [NC,L]
-RewriteRule ^robots.txt ./public/robots.txt [NC,L]
+RewriteRule ^manifest.json ./wwwroot/Manifest.json [NC,L]
+RewriteRule ^robots.txt ./wwwroot/Robots.txt [NC,L]
 
 
 
